@@ -59,7 +59,7 @@ The returned is a `dict` of following structure
 ...
 ```
 
-`cli.py` demonstrate the usage by letting the user perform google searches from the terminal with the following command
+`cli.py` demonstrates the usage by performing google searches from the terminal with the following command
 ```
 python cli.py <query> <number_of_pages>
 ```
