@@ -27,11 +27,11 @@
 - [Legal](https://github.com/s0md3v/googly#legal)
 
 ### Introduction
-goop can perform google searches without being blocked by the CAPTCHA.
+goop can perform google searches without being blocked by the CAPTCHA or hitting any rate limits.
 
 ### How it works?
 Facebook provides a [debugger tool](https://developers.facebook.com/tools/debug/echo/?q=https://example.com) for its scraper.
-Interestingly, Google doesn't limit the requests made by this debugger and hence it can be used to scrap the google search results without being blocked by the CAPTCHA.\
+Interestingly, Google doesn't limit the requests made by this debugger (whitelisted?) and hence it can be used to scrap the google search results without being blocked by the CAPTCHA.\
 Since facebook is involved, a facebook session `Cookie` must be supplied to the library with each request.
 ### Usage
 #### Installation
@@ -46,6 +46,25 @@ page_1 = goop.search('red shoes', '<your facebook cookie>')
 page_2 = goop.search('red_shoes', '<your facebook cookie>', page='1')
 include_omitted_results = goop.search('red_shoes', '<your facebook cookie>', page='8', full=True)
 ```
+The returned is a `dict` of following structure
+
+```
+{
+    "0": {
+        "url": "https://example.com",
+        "text": "Example webpage",
+        "summary": "This is an example webpage whose aim is to demonstrate the usage of ..."
+    },
+    "1": {
+...
+```
+
+`cli.py` demonstrate the usage by letting the user perform google searches from the terminal with the following command
+```
+python cli.py <query> <number_of_pages>
+```
+
+![goop-cli](https://i.ibb.co/30Vsk87/Screenshot-2019-08-02-22-42-53.png)
 
 ### Legal & Disclaimer
 Scraping google search results is illegal. This library is merely a proof of concept of the bypass. The author isn't responsible for the actions of the end users.
