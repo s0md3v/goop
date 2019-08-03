@@ -19,12 +19,12 @@
 
 ### Contents
 
-- [Introduction](https://github.com/s0md3v/googly#introduction)
-- [How it works?](https://github.com/s0md3v/googly#how-it-works)
-- [Usage](https://github.com/s0md3v/googly#usage)
-    - [Installation](https://github.com/s0md3v/googly#installation)
-    - [Example](https://github.com/s0md3v/googly#example)
-- [Legal](https://github.com/s0md3v/googly#legal)
+- [Introduction](#introduction)
+- [How it works?](#how-it-works)
+- [Usage](#usage)
+    - [Installation](#installation)
+    - [Example](#example)
+- [Legal](#legal--disclaimer)
 
 ### Introduction
 goop can perform google searches without being blocked by the CAPTCHA or hitting any rate limits.
