@@ -41,8 +41,8 @@ def search(query, cookie, page=0, full=False):
     page - search result page number (optional)
     """
     offset = page * 10
-    full = 1 if False else 0
-    escaped = url_encode('https://google.com/search?q=%s&start=%i&filter=%i' % (url_encode(query), offset, full))
+    filter = 1 if not full else 0
+    escaped = url_encode('https://google.com/search?q=%s&start=%i&filter=%i' % (url_encode(query), offset, filter))
     headers = {
     'Host': 'developers.facebook.com',
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0',
