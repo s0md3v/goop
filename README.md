@@ -17,6 +17,8 @@
   </a>
 </p>
 
+> **Note:** It no longer works. Google team told me it's not a legitimate issue when I reported it to them but now they just silently fixed it.
+
 ### Contents
 
 - [Introduction](#introduction)
@@ -43,10 +45,10 @@ pip install goop
 from goop import goop
 
 page_1 = goop.search('red shoes', '<your facebook cookie>')
-page_2 = goop.search('red_shoes', '<your facebook cookie>', page='1')
-include_omitted_results = goop.search('red_shoes', '<your facebook cookie>', page='8', full=True)
+page_2 = goop.search('red shoes', '<your facebook cookie>', page='1')
+include_omitted_results = goop.search('red shoes', '<your facebook cookie>', page='8', full=True)
 ```
-The returned is a `dict` of following structure
+A `dict` of following structure is returned
 
 ```
 {
